@@ -7,7 +7,7 @@ const WeatherDisplay = ({ weatherData }) => {
         <h2>Loading</h2>
     )
   const weather = weatherData.weather[0]
-  const iconUrl = 'http://openweathermap.org/img/w/' + weather.icon + '.png'
+  const iconUrl = 'https://openweathermap.org/img/w/' + weather.icon + '.png'
   return (
     <div>
       <h1>
