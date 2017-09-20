@@ -4,11 +4,8 @@ import { getWeather } from '../services/weather'
 const WeatherDisplay = ({ weatherData }) => {
   if (!weatherData)
     return (
-      <div>
         <h2>Loading</h2>
-      </div>
     )
-  console.log(weatherData)
   const weather = weatherData.weather[0]
   const iconUrl = 'http://openweathermap.org/img/w/' + weather.icon + '.png'
   return (

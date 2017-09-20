@@ -5,11 +5,9 @@ import 'bootswatch/paper/bootstrap.css'
 
 import { Navbar, NavItem, Nav, Grid, Row, Col } from 'react-bootstrap'
 
-import Img from 'react-image'
-
 import Weather from './containers/wrapWeather'
 
-const PLACES = [{ name: 'Tiraspol' }, { name: 'berlin' }, { name: 'Ribnica' }]
+const PLACES = [{ name: 'Tiraspol' }, { name: 'Berlin' }, { name: 'Ribnica' }]
 
 class App extends Component {
   constructor() {

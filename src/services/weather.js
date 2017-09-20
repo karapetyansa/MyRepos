@@ -8,8 +8,8 @@ const cache = {}
 
 export const getWeather = async name => {
   let currentCity = cache[name]
-  const currentTime = Date()
-  if (!currentCity || currentCity.time > currentTime - 60000) {
+  const currentTime = Date.now()
+  if (!currentCity || currentCity.time < currentTime - 60000) {
     currentCity = await getWeatherFromNet(name)
     currentCity.time = currentTime
     cache[name] = currentCity
