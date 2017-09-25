@@ -26,10 +26,14 @@ class Weather extends Component {
   state = { weatherData: undefined }
 
   async componentDidMount() {
-    this.setState({ weatherData: await getWeather(this.props.name) })
+    this.setState({ weatherData: await getWeather(this.props.match.params.cityName) })
   }
 
-  render() {
+  async componentWillReceiveProps(nextProps){
+    this.setState({ weatherData: await getWeather(nextProps.match.params.cityName) })
+  }
+
+  render() {   
     return <WeatherDisplay weatherData={this.state.weatherData} />
   }
 }
